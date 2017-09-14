@@ -58,7 +58,13 @@ export default {
       }
     },
     register () {
-
+      if (this.username === '' || this.password === '') {
+        alert('username / password field can\'t null')
+      } else {
+        this.register(this.user)
+        this.user.username = ''
+        this.user.password = ''
+      }
     }
   }
 }

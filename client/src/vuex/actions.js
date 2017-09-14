@@ -29,6 +29,16 @@ const actions = {
       console.error(err)
       commit('setUser', null)
     })
+  },
+  register ({ commit }, user) {
+    http.post('/user/signup', {
+      username: user.username,
+      password: user.password
+    })
+    .then(result => {
+      commit('registerMsg', 'register success')
+    })
+    .catch(err => console.error(err))
   }
 }
 

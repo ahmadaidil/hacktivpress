@@ -8,7 +8,8 @@ Vue.use(Vuex)
 const initialState = {
   user: null,
   token: null,
-  loginMsgErr: ''
+  loginMsgErr: '',
+  registerMsg: ''
 }
 
 export default new Vuex.Store({
