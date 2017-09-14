@@ -16,8 +16,8 @@ Route | HTTP | Description
 `/article/:id` | GET | Get one article
 `/article` | POST | Create article
 `/article/:id` | PUT | Update article
-`/article/:author` | GET | Get all article by author
-`/article/:category` | GET | Get all article by category
+`/article/author/:author` | GET | Get all article by author
+`/article/category/:category` | GET | Get all article by category
 `/article/:id` | DELETE | remove article
 
 ## Usage
