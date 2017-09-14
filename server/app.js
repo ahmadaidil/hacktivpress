@@ -7,7 +7,7 @@ const express = require('express'),
       //All Route Files
       index = require('./routes/index'),
       user = require('./routes/user'),
-      // article = require('./routes/article'),
+      article = require('./routes/article'),
       //Express Instance
       app = express();
 
@@ -22,7 +22,7 @@ mongoose.connect('mongodb://ahmadaidil:ahmadaidil@todoo-shard-00-00-pgpza.mongod
 
 app.use('/', index)
 app.use('/user', user);
-// app.use('/article', article);
+app.use('/article', article);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
