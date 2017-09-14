@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Auth from '@/components/Auth'
 import Articles from '@/components/Articles'
 import Article from '@/components/Article'
+import ArticleCategory from '@/components/ArticleCategory'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
         {
           path: '',
           component: Articles
+        },
+        {
+          path: ':category',
+          component: ArticleCategory,
+          props: true
         }
       ]
     },

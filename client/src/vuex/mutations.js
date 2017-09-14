@@ -17,6 +17,9 @@ const mutations = {
   },
   setArticle (state, payload) {
     state.article = payload
+  },
+  setCategory (state, payload) {
+    state.category = payload
   }
 }
 

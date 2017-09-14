@@ -53,6 +53,13 @@ const actions = {
       commit('setArticle', article.data)
     })
     .catch(err => console.error(err))
+  },
+  getCategory ({ commit }, category) {
+    http.get(`/article/category/${category}`)
+    .then(articles => {
+      commit('setCategory', articles.data)
+    })
+    .catch(err => console.error(err))
   }
 }
 
