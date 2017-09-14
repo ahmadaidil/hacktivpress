@@ -2,7 +2,7 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Brand</a>
+        <router-link class="navbar-brand" :to="'/'">Brand</router-link>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
