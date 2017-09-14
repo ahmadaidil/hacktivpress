@@ -13,7 +13,13 @@
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Login</a></li>
+          <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
+          <!-- use the modal component, pass in the prop -->
+          <!-- <modal v-if="showModal" @close="showModal = false"> -->
+          <!-- <li><a role="button" data-toggle="modal" data-target="#login-modal">Login</a></li>
+          <li v-if="user!=null"><a href="#">{{user.fullname}}</a></li>
+          <li><a href="#" @click="logout" v-if="token!=null">Logout</a></li> -->
+          <li><router-link :to="'/login'">Login</router-link></li>
         </ul>
       </div>
     </div>
@@ -22,7 +28,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
