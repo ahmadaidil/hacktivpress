@@ -58,7 +58,7 @@ exports.update = (req, res) => {
 }
 
 exports.getByAuthor = (req, res) => {
-  article.findOne({
+  article.find({
     author: req.params.author
   })
   .populate('author', '_id username')
@@ -69,7 +69,7 @@ exports.getByAuthor = (req, res) => {
 }
 
 exports.getByCategory = (req, res) => {
-  article.findOne({
+  article.find({
     category: req.params.category
   })
   .populate('author', '_id username')
