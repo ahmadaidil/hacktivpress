@@ -8,5 +8,7 @@ router.get('/:id', articleController.getOne);
 router.get('/', articleController.getAll);
 router.put('/:id', articleController.update);
 router.delete('/:id', articleController.rm);
+router.get('/author/:author', articleController.getByAuthor);
+router.get('/category/:category', articleController.getByCategory);
 
 module.exports = router;
