@@ -11,6 +11,12 @@ const mutations = {
   setUser (state, payload) {
     state.user = payload
     state.token = localStorage.getItem('accesstoken')
+  },
+  setArticles (state, payload) {
+    state.articles = payload
+  },
+  setArticle (state, payload) {
+    state.article = payload
   }
 }
 

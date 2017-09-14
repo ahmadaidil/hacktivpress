@@ -9,7 +9,9 @@ const initialState = {
   user: null,
   token: null,
   loginMsgErr: '',
-  registerMsg: ''
+  registerMsg: '',
+  articles: [],
+  article: {}
 }
 
 export default new Vuex.Store({

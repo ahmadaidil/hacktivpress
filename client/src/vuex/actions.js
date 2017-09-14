@@ -39,6 +39,20 @@ const actions = {
       commit('registerMsg', 'register success')
     })
     .catch(err => console.error(err))
+  },
+  getArticles ({ commit }) {
+    http.get('/article')
+    .then(articles => {
+      commit('setArticles', articles.data)
+    })
+    .catch(err => console.error(err))
+  },
+  getArticle ({ commit }, id) {
+    http.get(`/article/${id}`)
+    .then(article => {
+      commit('setArticle', article.data)
+    })
+    .catch(err => console.error(err))
   }
 }
 
