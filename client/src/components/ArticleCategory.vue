@@ -1,10 +1,10 @@
 <template>
   <div class="col-md-9">
     <div class="list-group">
-      <router-link v-for="(c, index) in category" :key="index" class="list-group-item" :to="'/article/' + article._id">
+      <div v-for="(c, index) in category" :key="index" class="list-group-item">
         <h4 class="list-group-item-heading">{{c.title}}</h4>
         <p class="list-group-item-text">{{c.content}}</p>
-      </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -12,6 +12,7 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
+  props: ['ct'],
   computed: {
     ...mapState([
       'category'
@@ -23,10 +24,10 @@ export default {
     ])
   },
   mounted () {
-    this.getCategory(this.category)
+    this.getCategory(this.ct)
   },
   watch: {
-    category (newCategory) {
+    ct (newCategory) {
       this.getCategory(newCategory)
     }
   }

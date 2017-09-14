@@ -19,7 +19,7 @@ export default new Router({
           component: Articles
         },
         {
-          path: ':category',
+          path: ':ct',
           component: ArticleCategory,
           props: true
         }
