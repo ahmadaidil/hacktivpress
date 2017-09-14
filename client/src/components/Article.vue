@@ -25,6 +25,11 @@ export default {
   },
   mounted () {
     this.getArticle(this.id)
+  },
+  watch: {
+    id (newId) {
+      this.getArticle(newId)
+    }
   }
 }
 </script>
